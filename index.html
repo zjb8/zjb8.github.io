@@ -1,22 +1,210 @@
-﻿<h1>hi，欢迎</h1>
-<h2>zjb8的主页</h2>
-<h3>os</h3>
-<h4>↘我的网页</h4>
-<img src="os.png">
-<h4>
-	
-</h4>
-<a href="https://zjb8.github.io/game">game</a>
-<h4>
-	
-</h4>
-<a href="https://zjb8.github.io/my/my.html">自我介绍</a>
-<h4>
-	
-</h4>
-<a href="https://zjb8.github.io/my/hi.html">game-失败</a>
-<h4>（game-失败真的失败了！）</h4>
-<h4>
-	
-</h4>
-<a href="https://zjb8.github.io/mqj/deepseek_html_20260509_dc8052.html">母亲节给妈妈看</a>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zjb_os 的主页</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Microsoft YaHei", Arial, sans-serif;
+            background: radial-gradient(circle at top, #6a1b9a 0%, #4b1148 45%, #1a1033 100%);
+            color: #f4f4f4;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 24px 24px 60px;
+            overflow-x: hidden;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        body::before,
+        body::after {
+            content: "";
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(60px);
+            opacity: 0.35;
+            animation: float 8s ease-in-out infinite;
+        }
+
+        body::before {
+            width: 240px;
+            height: 240px;
+            background: #00c2ff;
+            top: -60px;
+            left: -40px;
+        }
+
+        body::after {
+            width: 260px;
+            height: 260px;
+            background: #ff00f2;
+            bottom: -70px;
+            right: -40px;
+            animation-delay: 2s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) scale(1); }
+            50% { transform: translateY(-20px) scale(1.05); }
+        }
+
+        .card {
+            width: min(92vw, 620px);
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 24px;
+            padding: 28px 24px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            margin: 0 0 10px;
+            font-size: 2rem;
+            color: #4fd3ff;
+            text-shadow: 0 0 16px rgba(79, 211, 255, 0.6);
+        }
+
+        h2 {
+            margin: 8px 0;
+            font-size: 1.2rem;
+            color: #ffffff;
+        }
+
+        .subtitle {
+            margin: 6px 0 18px;
+            color: #d8d8d8;
+            font-size: 0.95rem;
+        }
+
+        .intro {
+            margin: 0 0 18px;
+            padding: 12px 14px;
+            border-radius: 14px;
+            background: rgba(255, 255, 255, 0.08);
+            color: #f2f2f2;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 6px 0 18px;
+        }
+
+        .nav a {
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: rgba(79, 211, 255, 0.16);
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.92rem;
+            border: 1px solid rgba(79, 211, 255, 0.25);
+        }
+
+        img {
+            width: 160px;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 6px solid #4fd3ff;
+            box-shadow: 0 0 30px rgba(255, 0, 242, 0.8);
+            cursor: pointer;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            margin: 10px 0 8px;
+        }
+
+        img:hover {
+            transform: scale(1.04);
+            box-shadow: 0 0 40px rgba(255, 0, 242, 1);
+        }
+
+        .hint {
+            margin: 4px 0 18px;
+            font-size: 0.95rem;
+            color: #f2f2f2;
+        }
+
+        .links {
+            display: grid;
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .links a {
+            display: block;
+            padding: 12px 14px;
+            border-radius: 999px;
+            background: rgba(79, 211, 255, 0.15);
+            color: #ffffff;
+            text-decoration: none;
+            border: 1px solid rgba(79, 211, 255, 0.3);
+            transition: background 0.2s ease, transform 0.2s ease;
+        }
+
+        .links a:hover {
+            background: rgba(79, 211, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .note {
+            margin-top: 14px;
+            color: #ffd8f5;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="card" id="home">
+        <h1>hi，欢迎</h1>
+        <h2>zjb_os 的主页</h2>
+        <p class="subtitle">这里是我的个人入口，点击头像可进入 B 站</p>
+        <div class="intro" id="about">
+            我是 zjb_os，喜欢折腾网页和创作内容。这里整理了一些我的链接，欢迎随便看看。
+        </div>
+        <div class="nav">
+            <a href="#home">主页</a>
+            <a href="#links">链接</a>
+            <a href="#about">关于</a>
+        </div>
+        <img src="os.png" alt="头像" onclick="zjb()">
+        <p class="hint">↑ 这个头像也是链接</p>
+
+        <div class="links" id="links">
+            <a href="https://zjb8.github.io/game">game</a>
+            <a href="https://zjb8.github.io/my/my.html">自我介绍</a>
+            <a href="https://zjb8.github.io/my/hi.html">game-失败</a>
+            <a href="https://zjb8.github.io/mqj/deepseek_html_20260509_dc8052.html">母亲节给妈妈看</a>
+            <a href="https://1850319527.share.123pan.cn/123pan/Irl1vd-PZUFH">zft</a>
+        </div>
+
+        <p class="note">（game-失败真的失败了！）</p>
+    </div>
+    <script>
+        alert("你好🖐");
+
+        function zjb() {
+            alert("前方进入 B 站");
+            window.open('https://space.bilibili.com/3706932424608508');
+        }
+    </script>
+</body>
+</html>
